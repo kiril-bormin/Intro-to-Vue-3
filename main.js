@@ -2,20 +2,29 @@ const product = 'Bottes'
 const app = Vue.createApp({
     data() {
         return {
+            cart: 0,
             product: 'Socks',
             image: './assets/images/socks_blue.jpg',
             inStock: true,
             details: ['50% cotton', '30% wool', '20% polyester'],
-            variantes: [
-                {id: 2234, color: 'green'},
-                {id: 2235, color: 'bleu'}
-            ],
-            sizes: [
-                {id: 1, size: 'S'},
-                {id: 2, size: 'M'},
-                {id: 3, size: 'L'},
-                {id: 4, size: 'XL'}
+            variants: [
+              { id: 2234, color: 'green', image: './assets/images/socks_green.jpg'},
+              { id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg' },
             ]
+        }
+    },
+    methods: {
+        addToCart(){
+            this.cart += 1
+        },
+        updateImage(variantImage){
+            this.image = variantImage
+        },
+        deleteFromCart(){
+            if(this.cart > 0){
+                this.cart -= 1
+            }
+            else{}
         }
     }
 })
