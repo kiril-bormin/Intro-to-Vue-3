@@ -4,7 +4,8 @@ const app = Vue.createApp({
         return {
             product: 'Socks',
             image: './assets/images/socks_blue.jpg',
-            url: 'https://www.etml.ch'
+            inventory : 100, 
+            onSale : true
         }
     }
 })
