@@ -1,9 +1,10 @@
 const product = 'Bottes'
 const app = Vue.createApp({
-    data(){
-        return{
-            product,
-            description: '2'
+    data() {
+        return {
+            product: 'Socks',
+            image: './assets/images/socks_blue.jpg',
+            url: 'https://www.etml.ch'
         }
     }
 })
