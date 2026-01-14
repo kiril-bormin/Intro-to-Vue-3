@@ -9,13 +9,8 @@ const app = Vue.createApp({
             details: ['50% cotton', '30% wool', '20% polyester'],
             selectedVariant: 0,
             variants: [
-<<<<<<< Updated upstream
-              { id: 2234, color: 'green', image: './assets/images/socks_green.jpg'},
-              { id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg' },
-=======
               { id: 2234, color: 'green', image: './assets/images/socks_green.jpg', quantity: 50 },
               { id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg', quantity: 0 },
->>>>>>> Stashed changes
             ]
         }
     },
@@ -23,16 +18,6 @@ const app = Vue.createApp({
         addToCart(){
             this.cart += 1
         },
-<<<<<<< Updated upstream
-        updateImage(variantImage){
-            this.image = variantImage
-        },
-        deleteFromCart(){
-            if(this.cart > 0){
-                this.cart -= 1
-            }
-            else{}
-=======
         updateVariant(index){
             this.selectedVariant = index
         }
@@ -46,7 +31,6 @@ const app = Vue.createApp({
         },  
         inStock(){
             return this.variants[this.selectedVariant].quantity
->>>>>>> Stashed changes
         }
     }
 })
